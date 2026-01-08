@@ -143,15 +143,15 @@ devops-linux-deploy-skills-claude-codex/
 │   ├── ci-cd.md
 │   ├── docker.md
 │   └── directory-layout.md
+├── marketplace.json                    # Claude Code marketplace catalog (root)
 ├── .claude/
 │   └── skills/
 │       └── devops-linux-deploy/        # Claude Code skill (auto-load)
 │           ├── skill.md
 │           ├── assets/
 │           └── references/
-└── .claude-plugin/                     # Claude Code plugin (marketplace)
+└── .claude-plugin/                     # Claude Code plugin
     ├── plugin.json                     # Plugin manifest
-    ├── marketplace.json                # Marketplace catalog
     └── skills/
         └── devops-linux-deploy/
             ├── skill.md

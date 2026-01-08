@@ -1,0 +1,22 @@
+{
+  "name": "touhidkhansoft-skills",
+  "owner": {
+    "name": "TouhidKhansoft",
+    "email": "touhidkhansoft@example.com"
+  },
+  "metadata": {
+    "description": "TouhidKhansoft's collection of Claude Code plugins and skills",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "devops-linux-deploy",
+      "source": "./.claude-plugin",
+      "description": "Deployment guidance for Linux servers with Nginx, Node.js, Next.js, Python/Django, Postgres, Docker, and CI/CD",
+      "version": "1.0.0",
+      "author": {
+        "name": "TouhidKhansoft"
+      }
+    }
+  ]
+}
