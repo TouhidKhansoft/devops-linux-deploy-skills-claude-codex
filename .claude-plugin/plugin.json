@@ -2,7 +2,9 @@
   "name": "devops-linux-deploy",
   "version": "1.0.0",
   "description": "Deployment guidance for Linux servers with Nginx, Node.js, Next.js, Python/Django, Postgres, Docker, and CI/CD",
-  "author": "TouhidKhansoft",
+  "author": {
+    "name": "TouhidKhansoft"
+  },
   "license": "MIT",
   "keywords": [
     "devops",
@@ -15,6 +17,6 @@
     "postgres"
   ],
   "skills": [
-    "skills/devops-linux-deploy"
+    "./skills/devops-linux-deploy"
   ]
 }
