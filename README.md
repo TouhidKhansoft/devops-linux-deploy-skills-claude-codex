@@ -23,9 +23,23 @@ This skill is compatible with both **Codex CLI** and **Claude Code**.
 
 ## Installation
 
-### Claude Code
+### Claude Code (Plugin Marketplace)
 
-#### Option A: Clone and symlink (recommended for development)
+#### Option A: Install via Plugin Command (Recommended)
+
+First, add the marketplace:
+
+```
+/plugin marketplace add YOUR_USERNAME/devops-linux-deploy
+```
+
+Then install the plugin:
+
+```
+/plugin install devops-linux-deploy@khansoft-skills
+```
+
+#### Option B: Clone and symlink (for development)
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/devops-linux-deploy.git
@@ -33,7 +47,7 @@ mkdir -p ~/.claude/skills
 ln -s "$(pwd)/devops-linux-deploy/.claude/skills/devops-linux-deploy" ~/.claude/skills/devops-linux-deploy
 ```
 
-#### Option B: Copy into Claude Code skills
+#### Option C: Copy into Claude Code skills
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/devops-linux-deploy.git
@@ -41,7 +55,7 @@ mkdir -p ~/.claude/skills
 cp -R devops-linux-deploy/.claude/skills/devops-linux-deploy ~/.claude/skills/
 ```
 
-#### Option C: Project-level installation
+#### Option D: Project-level installation
 
 Copy the `.claude` folder into your project root:
 
@@ -53,6 +67,14 @@ cp -R devops-linux-deploy/.claude /path/to/your/project/
 
 ```bash
 test -f ~/.claude/skills/devops-linux-deploy/skill.md && echo "Skill installed"
+```
+
+#### Plugin Management Commands
+
+```
+/plugin list                    # List installed plugins
+/plugin remove devops-linux-deploy   # Remove the plugin
+/plugin marketplace list        # List known marketplaces
 ```
 
 ---
@@ -107,6 +129,7 @@ Load the skill on demand:
 ```
 devops-linux-deploy/
 ├── README.md                           # This file
+├── LICENSE                             # MIT License
 ├── SKILL.md                            # Codex skill definition
 ├── assets/                             # Config templates (Codex)
 │   ├── nginx_site.conf
@@ -132,12 +155,20 @@ devops-linux-deploy/
 │   ├── ci-cd.md
 │   ├── docker.md
 │   └── directory-layout.md
-└── .claude/
+├── .claude/
+│   └── skills/
+│       └── devops-linux-deploy/        # Claude Code skill (auto-load)
+│           ├── skill.md
+│           ├── assets/
+│           └── references/
+└── .claude-plugin/                     # Claude Code plugin (marketplace)
+    ├── plugin.json                     # Plugin manifest
+    ├── marketplace.json                # Marketplace catalog
     └── skills/
-        └── devops-linux-deploy/        # Claude Code skill
+        └── devops-linux-deploy/
             ├── skill.md
-            ├── assets/                 # Config templates
-            └── references/             # Reference docs
+            ├── assets/
+            └── references/
 ```
 
 ---
@@ -154,6 +185,11 @@ When invoked, this skill helps you:
 ---
 
 ## Updating
+
+**If installed via plugin:**
+```
+/plugin marketplace update
+```
 
 **If installed via symlink:** Pull the latest changes and restart your session.
 
