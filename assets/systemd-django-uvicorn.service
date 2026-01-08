@@ -1,0 +1,14 @@
+[Unit]
+Description=Django ASGI via Uvicorn
+After=network.target
+
+[Service]
+User=deploy
+WorkingDirectory=/srv/app/repo
+EnvironmentFile=/srv/app/shared/.env
+ExecStart=/srv/app/venv/bin/uvicorn config.asgi:application --host 127.0.0.1 --port 8001
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
