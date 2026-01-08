@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "devops-linux-deploy",
-      "source": ".",
+      "source": "./",
       "description": "Deployment guidance for Linux servers with Nginx, Node.js, Next.js, Python/Django, Postgres, Docker, and CI/CD",
       "version": "1.0.0",
       "author": {
