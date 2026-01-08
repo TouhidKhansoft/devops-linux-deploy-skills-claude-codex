@@ -2,7 +2,7 @@
   "name": "devops-linux-deploy",
   "version": "1.0.0",
   "description": "Deployment guidance for Linux servers with Nginx, Node.js, Next.js, Python/Django, Postgres, Docker, and CI/CD",
-  "author": "khansoft",
+  "author": "TouhidKhansoft",
   "license": "MIT",
   "keywords": [
     "devops",

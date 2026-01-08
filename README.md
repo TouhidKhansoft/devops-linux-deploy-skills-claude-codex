@@ -30,29 +30,30 @@ This skill is compatible with both **Codex CLI** and **Claude Code**.
 First, add the marketplace:
 
 ```
-/plugin marketplace add YOUR_USERNAME/devops-linux-deploy
+/plugin marketplace add TouhidKhansoft/devops-linux-deploy-skills-claude-codex
 ```
 
 Then install the plugin:
 
 ```
-/plugin install devops-linux-deploy@khansoft-skills
+/plugin install devops-linux-deploy@touhidkhansoft-skills
 ```
 
 #### Option B: Clone and symlink (for development)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/devops-linux-deploy.git
+git clone https://github.com/TouhidKhansoft/devops-linux-deploy-skills-claude-codex.git
+cd devops-linux-deploy-skills-claude-codex
 mkdir -p ~/.claude/skills
-ln -s "$(pwd)/devops-linux-deploy/.claude/skills/devops-linux-deploy" ~/.claude/skills/devops-linux-deploy
+ln -s "$(pwd)/.claude/skills/devops-linux-deploy" ~/.claude/skills/devops-linux-deploy
 ```
 
 #### Option C: Copy into Claude Code skills
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/devops-linux-deploy.git
+git clone https://github.com/TouhidKhansoft/devops-linux-deploy-skills-claude-codex.git
 mkdir -p ~/.claude/skills
-cp -R devops-linux-deploy/.claude/skills/devops-linux-deploy ~/.claude/skills/
+cp -R devops-linux-deploy-skills-claude-codex/.claude/skills/devops-linux-deploy ~/.claude/skills/
 ```
 
 #### Option D: Project-level installation
@@ -60,7 +61,8 @@ cp -R devops-linux-deploy/.claude/skills/devops-linux-deploy ~/.claude/skills/
 Copy the `.claude` folder into your project root:
 
 ```bash
-cp -R devops-linux-deploy/.claude /path/to/your/project/
+git clone https://github.com/TouhidKhansoft/devops-linux-deploy-skills-claude-codex.git
+cp -R devops-linux-deploy-skills-claude-codex/.claude /path/to/your/project/
 ```
 
 #### Verify Claude Code installation
@@ -72,9 +74,9 @@ test -f ~/.claude/skills/devops-linux-deploy/skill.md && echo "Skill installed"
 #### Plugin Management Commands
 
 ```
-/plugin list                    # List installed plugins
+/plugin list                         # List installed plugins
 /plugin remove devops-linux-deploy   # Remove the plugin
-/plugin marketplace list        # List known marketplaces
+/plugin marketplace list             # List known marketplaces
 ```
 
 ---
@@ -89,17 +91,17 @@ test -f ~/.claude/skills/devops-linux-deploy/skill.md && echo "Skill installed"
 #### Option A: Clone and symlink (recommended for development)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/devops-linux-deploy.git
+git clone https://github.com/TouhidKhansoft/devops-linux-deploy-skills-claude-codex.git
 mkdir -p "$CODEX_HOME/skills/custom"
-ln -s "$(pwd)/devops-linux-deploy" "$CODEX_HOME/skills/custom/devops-linux-deploy"
+ln -s "$(pwd)/devops-linux-deploy-skills-claude-codex" "$CODEX_HOME/skills/custom/devops-linux-deploy"
 ```
 
 #### Option B: Copy into Codex skills
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/devops-linux-deploy.git
+git clone https://github.com/TouhidKhansoft/devops-linux-deploy-skills-claude-codex.git
 mkdir -p "$CODEX_HOME/skills/custom"
-cp -R devops-linux-deploy "$CODEX_HOME/skills/custom/"
+cp -R devops-linux-deploy-skills-claude-codex "$CODEX_HOME/skills/custom/devops-linux-deploy"
 ```
 
 #### Verify Codex installation
@@ -127,7 +129,7 @@ Load the skill on demand:
 ## Repository Structure
 
 ```
-devops-linux-deploy/
+devops-linux-deploy-skills-claude-codex/
 ├── README.md                           # This file
 ├── LICENSE                             # MIT License
 ├── SKILL.md                            # Codex skill definition
@@ -194,13 +196,17 @@ When invoked, this skill helps you:
 **If installed via symlink:** Pull the latest changes and restart your session.
 
 ```bash
-cd /path/to/devops-linux-deploy
+cd /path/to/devops-linux-deploy-skills-claude-codex
 git pull
 ```
 
 **If installed via copy:** Re-run the copy step after pulling changes.
 
 ---
+
+## Author
+
+**TouhidKhansoft** - [GitHub](https://github.com/TouhidKhansoft)
 
 ## License
 

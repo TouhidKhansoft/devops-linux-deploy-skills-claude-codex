@@ -1,6 +1,6 @@
 {
-  "name": "khansoft-skills",
-  "description": "Khansoft's collection of Claude Code plugins and skills",
+  "name": "touhidkhansoft-skills",
+  "description": "TouhidKhansoft's collection of Claude Code plugins and skills",
   "plugins": [
     {
       "name": "devops-linux-deploy",
