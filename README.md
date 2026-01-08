@@ -110,20 +110,6 @@ cp -R devops-linux-deploy-skills-claude-codex "$CODEX_HOME/skills/custom/devops-
 test -f "$CODEX_HOME/skills/custom/devops-linux-deploy/SKILL.md" && echo "Skill installed"
 ```
 
-#### Use in Codex
-
-Run the superpowers bootstrap once per session:
-
-```bash
-~/.codex/superpowers/.codex/superpowers-codex bootstrap
-```
-
-Load the skill on demand:
-
-```bash
-~/.codex/superpowers/.codex/superpowers-codex use-skill devops-linux-deploy
-```
-
 ---
 
 ## Repository Structure
